@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ganeshan weds Vani</title>
+</head>
+
+<body>
+    <!-- <div style="position: absolute; z-index: 11; top: 10px; left: 10px; cursor: pointer;">
+        <i class="fa fa-close text-white" style="font-size: 30px; padding: 10px; display: none;" id="player"></i>
+    </div> -->
+
+    <div class="container" style="background-color: #2161a3;">
+        <!-- <iframe width="100%" height="100%" id="video-player" style="z-index: 10; display: none;"
+            src="https://youtube.com/shorts/P50AzaZQmvg?si=YfFh6K1VttnjeCHO?autoplay=1" frameborder="0" allow="autoplay"
+            allowfullscreen></iframe> -->
+
+        <div class="sparkle sparkle-1"></div>
+        <div class="sparkle sparkle-2"></div>
+        <div class="sparkle sparkle-3"></div>
+        <div class="sparkle sparkle-4"></div>
+
+        <div class="leaf-bg">
+            <img src="leaf-bg.png" alt="" class="leaf">
+        </div>
+
+        <div class="flower-sticky-1">
+            <img src="side-stick.jpg" alt="">
+        </div>
+
+        <div class="flower-sticky-2">
+            <img src="side-stick.jpg" alt="">
+        </div>
+
+        <div>
+            <div class="text-center text-white font-cursive" style="margin-top: -200px;">
+                <h1 style="line-height: 0;">Vani</h1>
+                <p style="line-height: 1; ">weds</p>
+                <h1 style="line-height: 0;">Ganeshan</h1>
+            </div>
+
+        </div>
+
+        <div class="venue center text-center">
+            <div class="text-white" style="width: 80%;">
+                <div style="margin-bottom: 20px;">
+                    <small class="m-0 p-0">Save the date</small>
+                    <h2 class="p-0 m-0">25th April, 2024</h2>
+                </div>
+
+                <div class="center">
+                    <div class="btn" id="click-venue">
+                        <p class="p-0 m-0 text-black view-venue">View Venue</p>
+                    </div>
+                    <div class="btn" id="click-video" style="margin-left: 10px;">
+                        <p class="p-0 m-0 text-black view-venue" onclick="window.location = 'video.html'">
+                            View Invitation
+                            <a href="https://www.youtube.com/shorts/P50AzaZQmvg" target="_blank">
+                                <i class="fa fa-play text-black"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <p style="font-weight: bold;" class="p-0 m-0">You are invited.</p>
+                <p class="p-0 m-0">Please join us for an evening of elegance and joy as we exchange vows and begin our
+                    journey together
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.querySelector('#click-venue');
+        btn.addEventListener('click', function () {
+            let url = 'https://maps.app.goo.gl/ggnWaMjtQCBZvXpR6'
+            window.open(url, '_blank')
+        })
+
+        var clickVideo = document.getElementById('click-video')
+        var videoPlayer = document.getElementById('video-player')
+        var player = document.getElementById('player')
+        // var overlayVideo = document.getElementById('overlayVideo')
+
+        clickVideo.addEventListener('click', () => {
+            // overlayVideo.style.zIndex = 10
+            player.style.display = 'block'
+            videoPlayer.style.display = 'block'
+        })
+
+        player.addEventListener('click', () => {
+            // overlayVideo.style.zIndex = 0
+            player.style.display = 'none'
+            videoPlayer.style.display = 'none'
+        })
+    })
+</script>
+
+</html>
